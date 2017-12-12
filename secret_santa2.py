@@ -1,4 +1,4 @@
-# Draw secret santas from among pairs of spouses
+# Draw secret santas from among pairs of spouses such that nobody is paired with themselves or their own spouse
 import random
 
 # get list of participants and their spouses from the user
