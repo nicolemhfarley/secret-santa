@@ -1,30 +1,29 @@
-### Draw secret santas from among pairs of spouses
+# Draw secret santas from among pairs of spouses
 import random
 
+# get list of participants and their spouses from the user
 people = input("List people participating in secret santa, separated by commas: ")
-print(people)
+
 spouses = input("List spouses of participants in order, separated by commas: ")
-print(spouses)
+
 
 # split people and spouses into lists, removing empty spaces
 
 people_list = people.split(",")
 people_list = list(map(str.strip, people_list))
-print(people_list)
 
 spouse_list = spouses.split(",")
 spouse_list = list(map(str.strip, spouse_list))
-print(spouse_list)
 
-# function to draw randomly from people and spouses list and pair them
+# function to draw a name randomly from a list 
 
 def draw_name(list):
 	global x
 	x = random.choice(list)	
 	return (x)
 
+# pair participants w/ spouses 
 pairs = list(zip(people_list, spouse_list))
-print(pairs)
 
 # test to make sure secret santas aren't spouses or themselves.  
 secret_santas_list = []
